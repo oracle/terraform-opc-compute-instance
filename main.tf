@@ -10,8 +10,9 @@ resource "opc_compute_instance" "instance" {
 
   networking_info {
     index          = 0
-    shared_network = true
-    nat            = ["${compact( list(var.ip_reservation))}"]
+    shared_network = "${var.ip_network == "" ? true : false}"
+    ip_network     = "${var.ip_network}"
+    nat            = ["${compact(list(var.ip_reservation))}"]
     dns            = "${var.dns}"
     search_domains = "${var.search_domains}"
   }
