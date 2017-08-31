@@ -1,7 +1,7 @@
 OPC Compute Instance on Shared Network
 ======================================
 
-This Terraform module module creates a single Oracle Cloud Infrastructure OPC Compute Cloud instance with persistent block storage and optional public IP address reservation on the Shared Network interface.
+This Terraform module creates a single Oracle Cloud Infrastructure OPC Compute Cloud instance with persistent block storage and optional public IP address reservation on the Shared Network interface.
 
 Usage
 -----
