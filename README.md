@@ -12,7 +12,7 @@ If an IP Network is provided the instance is created with interface on the ip ne
 
 ```tf
 module "opc_instance_on_ip_network" {
-  source                 = "https://gtihub.com/oracle/terraform-opc-compute-instance"
+  source           = "https://gtihub.com/oracle/terraform-opc-compute-instance"
   instance_name    = "instance-on-ip-network"
   instance_shape   = "oc3"
   ip_network       = "${opc_compute_ip_network.ip-network.name}"
@@ -21,12 +21,12 @@ module "opc_instance_on_ip_network" {
 }
 
 resource "opc_compute_ip_network" "ip-network" {
-  name = "test-ip-network"
+  name              = "test-ip-network"
   ip_address_prefix = "192.168.1.0/24"
 }
 
 resource "opc_compute_ip_address_reservation" "ip-reservation" {
-  name = "test-ip-reservertion"
+  name            = "test-ip-reservertion"
   ip_address_pool = "public-ippool"
 }
 ```
@@ -37,11 +37,11 @@ If no IP Network is provided the instance is created with the interface on the S
 
 ```tf
 module "opc_instance_on_shared_network" {
-  source           = "https://gtihub.com/oracle/terraform-opc-compute-instance"
-  instance_name    = "instance-on-shared-network"
-  instance_shape   = "oc3"
-  ip_reservation   = "${opc_compute_ip_reservation.ip-reservation.name}"
-  search_domains   = ["cloud.oracle.com", "oraclecloud.com"]
+  source         = "https://gtihub.com/oracle/terraform-opc-compute-instance"
+  instance_name  = "instance-on-shared-network"
+  instance_shape = "oc3"
+  ip_reservation = "${opc_compute_ip_reservation.ip-reservation.name}"
+  search_domains = ["cloud.oracle.com", "oraclecloud.com"]
 }
 
 resource "opc_compute_ip_reservation" "ip-reservation" {
