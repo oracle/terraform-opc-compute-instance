@@ -1,3 +1,6 @@
+// Copyright © 2017 Oracle and/or its affiliates.  All rights reserved.
+// Licensed under the Universal Permissive License v 1.0
+
 variable boot_volume_image_list {
   description = "The Image List to use for the boot volume. Defaults to Oracle Linux 7.2 UEK4."
   default     = "/oracle/public/OL_7.2_UEKR4_x86_64"

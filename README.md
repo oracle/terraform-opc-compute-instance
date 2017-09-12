@@ -36,7 +36,7 @@ resource "opc_compute_ip_address_reservation" "ip-reservation" {
 If no IP Network is provided the instance is created with the interface on the Shared Network. Note that the Public IP Address reservation, if provided, must be an [`opc_compute_ip_reservation`](https://www.terraform.io/docs/providers/opc/r/opc_compute_ip_reservation.html)
 
 ```tf
-module "opc_instance_shared_network" {
+module "opc_instance_on_shared_network" {
   source           = "https://gtihub.com/oracle/terraform-opc-compute-instance"
   instance_name    = "instance-on-shared-network"
   instance_shape   = "oc3"
@@ -49,3 +49,10 @@ resource "opc_compute_ip_reservation" "ip-reservation" {
   permanent   = true
 }
 ```
+
+License
+-------
+
+Licensed under the [Universal Permissive License v 1.0](LICENSE.md)
+
+Copyright © 2017 Oracle and/or its affiliates. All rights reserved.
