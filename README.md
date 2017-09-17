@@ -12,7 +12,7 @@ If an IP Network is provided the instance is created with interface on the ip ne
 
 ```tf
 module "opc_instance_on_ip_network" {
-  source           = "https://gtihub.com/oracle/terraform-opc-compute-instance"
+  source           = "oracle/compute-instance/opc"
   instance_name    = "instance-on-ip-network"
   instance_shape   = "oc3"
   ip_network       = "${opc_compute_ip_network.ip-network.name}"
@@ -37,7 +37,7 @@ If no IP Network is provided the instance is created with the interface on the S
 
 ```tf
 module "opc_instance_on_shared_network" {
-  source         = "https://gtihub.com/oracle/terraform-opc-compute-instance"
+  source         = "oracle/compute-instance/opc"
   instance_name  = "instance-on-shared-network"
   instance_shape = "oc3"
   ip_reservation = "${opc_compute_ip_reservation.ip-reservation.name}"
