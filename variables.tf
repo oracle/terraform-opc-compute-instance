@@ -66,10 +66,9 @@ variable search_domains {
   default     = []
 }
 
-variable ssh_keys {
-  type        = "list"
-  description = "(Optional) List of SSH Key names."
-  default     = []
+variable ssh_key {
+  description = "(Optional) SSH Key name."
+  default     = ""
 }
 
 variable tags {

@@ -8,7 +8,7 @@ resource "opc_compute_instance" "instance" {
   shape               = "${var.instance_shape}"
   instance_attributes = "${var.instance_attributes}"
   reverse_dns         = "${var.reverse_dns}"
-  ssh_keys            = "${var.ssh_keys}"
+  ssh_keys            = ["${compact(list(var.ssh_key))}"]
   tags                = "${var.tags}"
 
   networking_info {
