@@ -1,7 +1,7 @@
-OPC Compute Instance
-====================
+OCI Classic Compute Instance
+============================
 
-This Terraform module creates a single Oracle Cloud Infrastructure OPC Compute Cloud instance with a persistent block storage boot volume and a single network interface on either the Shared Network or an IP Network interface, with an optional Public IP address reservation.
+This Terraform module creates a single Oracle Cloud Infrastructure **Classic** Compute (OPC) instance with a persistent block storage boot volume and a single network interface on either the Shared Network or an IP Network interface, with an optional Public IP address reservation.
 
 Usage
 -----
@@ -55,4 +55,4 @@ License
 
 Licensed under the [Universal Permissive License v 1.0](LICENSE.md)
 
-Copyright © 2017 Oracle and/or its affiliates. All rights reserved.
+Copyright © 2017, 2021 Oracle and/or its affiliates. All rights reserved.
